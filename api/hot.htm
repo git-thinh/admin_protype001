@@ -1,0 +1,23 @@
+<ul>
+<%
+var listMenu = _.filter(items, function (x) { return x.tag != null && x.tag.indexOf('khachhang') != -1; });
+listMenu.reverse();
+_.each(listMenu ,function(_item, _index, _list){
+var _title = _item.title;
+var _url = _item.url;
+var _img = _item.image.split(';');
+%>    
+<li>
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="<%= _url %>"><img class="media-object"  src="<%= _img %>"></a>
+                            </div>
+                            <div class="media-body">
+                                <h3 class="media-heading"><a href="<%= _url %>" style="display: block;  min-width: 250px;"><%= _title %></a></h3>
+                            </div>
+                        </div> 
+</li>
+<%
+});
+%>
+</ul>

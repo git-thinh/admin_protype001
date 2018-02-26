@@ -1,0 +1,19 @@
+<ul class="menu-top">
+<li><a href="/">Trang chủ</a></li>
+<%
+var listMenu = _.filter(items, function (x) { return x.tag != null && x.tag.indexOf('menu') != -1; });
+_.each(listMenu,function(_item, _index, _list){
+var _title = _item.title;
+var _url = _item.url;
+var _img = _item.image;
+%>    
+<li>
+    <a href="<%= _url %>"><%= _title %></a>
+</li>
+<%
+});
+%>
+<li>
+                        <p>Hotline: 0986 733 456</p>
+                    </li>
+</ul>

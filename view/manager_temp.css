@@ -1,0 +1,16 @@
+﻿.manager_temp {
+}
+
+    .manager_temp td.w2ui-node-dots {
+        display: none;
+    }
+
+    .manager_temp .w2ui-node-caption {
+        margin-left: 0px !important;
+        text-transform: uppercase;
+    }
+
+    .manager_temp #edit_template {
+        width: 100%;
+        height: 100%;
+    }

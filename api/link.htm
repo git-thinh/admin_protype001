@@ -1,0 +1,11 @@
+<%
+var listMenu = _.filter(items, function (x) { return x.tag != null && (x.tag.indexOf('link') != -1 || x.tag.indexOf('hot') != -1);  });
+_.each(listMenu ,function(_item, _index, _list){
+var _title = _item.title;
+var _url = _item.url;
+var _img = _item.image;
+%>    
+    <a href="<%= _url %>"><%= _title %></a>
+<%
+});
+%>

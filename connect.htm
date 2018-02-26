@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Connect</title>
+    <meta charset="utf-8">
+    <META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <link href="lib/connect.css" rel="stylesheet" />
+    <script src="lib/jquery.js"></script>
+    <script src="lib/w2ui-1.5.rc1.min.js"></script>
+    <link href="lib/w2ui-1.5.rc1.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="nav">
+        <span class="ic ic-hamburger fl"></span>
+        <span class="ic ic-lightning fl" onclick="location.reload(true);"></span>
+        <span class="ic ic-cloud2 fr"></span>
+    </div>
+
+    <script type="text/javascript">
+        var cacheMSG = {}; 
+
+        var es = new EventSource(location.origin + "/noti");
+        es.onmessage = function (event) {
+            var data = event.data;
+            //console.log('DATA = ', data);
+            var msg = JSON.parse(data);
+            var sid = msg.SID;
+            var time = msg.TimeBegin;
+            var name = sid.toString().substr(8, 6);
+
+            var list = cacheMSG[sid];
+            if (list == null || list.length == 0)
+                list = [msg];
+            else
+                list.push(msg);
+            cacheMSG[sid] = list;
+
+            var it = document.getElementById(sid);
+            if (it == null) {
+                var div = document.createElement('div');
+                div.addEventListener('click', function (ev) {
+                    var _it = ev.target;
+                    if (_it.tagName == 'EM' || _it.tagName == 'I') _it = _it.parentElement;
+                    var _id = _it.id;
+                    console.log('click ID = ', _id);
+                    var _box = document.getElementById('box_' + _id);
+                    if (_box != null) {
+                        _box.style.display = 'block';
+                        w2ui['grid_' + _id].resize();
+                    }
+                });
+                div.id = sid;
+                div.className = 'ic ic-comment';
+                div.innerHTML = '<em>' + name + '</em><i>' + list.length + '</i>';
+                window.document.body.insertBefore(div, window.document.body.firstChild);
+            } else {
+                it.innerHTML = '<em>' + name + '</em><i>' + list.length + '</i>';
+            }
+
+            var _kit_grid = 'grid_' + sid;
+            var box = document.getElementById('box_' + sid);
+            if (box == null) {
+                box = document.createElement('div');
+                box.id = 'box_' + sid;
+                box.style.display = 'none';
+                box.className = 'box';
+                document.body.appendChild(box);
+
+                if (!w2ui[_kit_grid]) {
+                    $().w2grid({
+                        name: _kit_grid,
+                        show: {
+                            header: false,
+                            toolbar: true,
+                            footer: false,
+                            toolbarSearch: false,
+                            toolbarInput: false,
+                            lineNumbers: true,
+                            toolbarReload: false,
+                            toolbarColumns: false,
+                            selectColumn: false,
+                            columnHeaders: true,
+                        },
+                        multiSearch: false,
+                        multiSelect: false,
+                        columns: [
+                                { field: 'Data', caption: 'Message', size: '80%' },
+                                { field: 'TimeBegin', caption: 'Time', size: '77px' },
+                        ],
+                        records: [],
+                        toolbar: {
+                            items: [
+                                { type: 'html', html: '[ <b>' + sid + '</b> ] ' },
+                                { type: 'html', html: '[ <b id="len_' + sid + '">0</b> ] ' },
+                                { type: 'spacer' },
+                                { id: 'chat', type: 'button', caption: 'Chat', checked: true },
+                                { id: 'close', type: 'button', caption: 'Close', checked: true },
+                            ],
+                            onClick: function (event) {
+                                switch (event.target) {
+                                    case 'close':
+                                        box.style.display = 'none';
+                                        break;
+                                    case 'chat':
+                                        break;
+                                }
+                            }
+                        },
+                        onRender: function (event) {
+                            event.onComplete = function () {
+                                //$scope.bindData();
+                            }
+                        }
+                    });
+
+                    $(box).w2render(_kit_grid);
+                }
+            }
+
+            w2ui[_kit_grid].add(msg);
+            document.getElementById('len_' + sid).innerHTML = list.length;
+        };
+    </script>
+
+</body>
+</html>

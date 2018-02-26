@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bảo Vệ Star</title>
+    <meta charset="utf-8" />
+    <link href="asset/style.css" rel="stylesheet" />
+<script src="lib/underscore-min.js"></script>
+    <script>
+        var m_category = category.json; 
+    </script>
+    <style>
+        .n-view p {
+            height: 100%;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="page">
+        <div class="navi">
+            <div class="container">
+                <a href="/">
+                    <img src="asset/img/h-logo.png" />
+                </a>
+            </div>
+        </div>
+        <div class="menu">
+            <div class="container">
+                <ul class="menu-top" id="menu-top"> 
+                    <li>
+                        <p style="color: red;">Hotline: 0904 921 923</p>
+                    </li>
+                </ul>
+                <script type="text/javascript" src="menu.js"></script>
+                <script type="text/javascript">
+                    anylinkmenu.init("menu_main");
+                </script>
+            </div>
+        </div>
+        <div class="col2">
+            <div class="left">
+                <div class="n-detail">
+                    <div class="n-view">
+                        <div class="n-con">
+                            [CONTENT]
+                        </div>
+                    </div>
+                    <em></em>
+                </div>
+                <div style="clear:both;" class="n-comment">
+
+                    <div id="fb-root"></div>
+                    <script>
+(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.9&appId=316779198762236";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+                    <div style="margin-left:7px;" class="fb-like" data-href="http://baovestar.vn/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+                    <div class="fb-comments" data-href="http://baovestar.vn/" data-width="100%" data-numposts="5"></div>
+
+                </div>
+                <div class="n-link">
+                    <b>Tin liên quan:</b>
+                    [link.htm]
+                </div>
+            </div>
+            <div class="right">
+                <div class="hot-news">
+                    [hot.htm]
+                </div>
+                <div style="clear:both;padding:5px;"></div>
+                <div class="form">
+                    <h3>Đăng ký ứng tuyển nhân viên bảo vệ</h3>
+                    <div class="f-post">
+ <form action="/contact" method="post" enctype="multipart/form-data">
+                        <p>
+                            <label>Họ và tên</label>
+                            <input type="text" name="fullname" placeholder="Nhập họ và tên" />
+                        </p>
+                        <p>
+                            <label>Điện thoại</label>
+                            <input type="text" name="phone" placeholder="Nhập số điện thoại" />
+                        </p>
+                        <p>
+                            <label>Thông tin</label>
+                            <textarea name="note" placeholder="Thông tin: chiều cao, cân nặng, Số chứng minh thư, ...."></textarea>
+                        </p>
+                        <p>
+                            <button type="submit">Gửi Đăng Ký</button>
+                        </p>
+                    </form>
+                    </div>
+                </div>
+                <img src="asset/img/viec-lam-bao-ve.jpg" />
+                <div class="ads">
+                    [khachhang.htm]
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="container">
+                [menu2.htm]
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <p>© CÔNG TY TNHH DỊCH VỤ BẢO VỆ STAR</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        if (window.innerWidth < 481)
+            document.body.className = 'mobile';
+        else if (window.innerWidth < 1025)
+            document.body.className = 'tablet'; 
+    </script>
+</body>
+</html>

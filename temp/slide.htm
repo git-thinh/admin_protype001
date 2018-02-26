@@ -1,0 +1,27 @@
+<p><a href="tam-nhin-su-menh_17070621100236.html"> 
+                        <img src="images/slide/tam-nhin-su-menh.jpg" id="slide-0" /></a>
+                    </p> 
+   
+                    <p><a href="slide-3_17070621161221.html"> 
+                        <img src="images/slide/ecoba.jpg" id="slide-1" /></a>
+                    </p> 
+   
+                    <p><a href="slide2_17071014336231.html"> 
+                        <img src="images/slide/IMG_20170710_142944.jpg" id="slide-2" /></a>
+                    </p> 
+
+
+
+                    <script>
+                        var slideIndex = 0;
+                        setInterval(function () {
+var img = document.getElementById('slide-' + slideIndex);
+if(img != null){
+                            var src = img.src;
+                            var bg = document.getElementById('slide-bg');
+                            bg.style = 'background-image: url("' + src + '");';
+}
+                            slideIndex++;
+                            if (slideIndex == 3) slideIndex = 0;
+                        }, 2500);
+                    </script>

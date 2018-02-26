@@ -1,0 +1,12 @@
+﻿
+#menu {
+    background-color: orange;
+    position: fixed;
+    z-index: 999;
+    width: 199px;
+    top: 28px;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    display: none;
+}

@@ -1,0 +1,1 @@
+{"recid":17070621161221,"url":"slide-3_17070621161221.html","title":"slide 3","active":false,"topic":"","tag":"slide","image":"images/slide/ecoba.jpg","image_position":0,"keyword":"","file":null,"content":" "}

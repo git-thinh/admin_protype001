@@ -1,0 +1,28 @@
+<%
+var listMenu = _.filter(items, function (x) { return x.tag != null && x.tag.indexOf('slide') != -1; });
+_.each(listMenu,function(_item, _index, _list){
+var _title = _item.title;
+var _url = _item.url;
+var _img = _item.image.split(';')[0];
+%>   
+                    <p><a href="<%= _url %>"> 
+                        <img src="<%= _img %>" id="slide-<%= _index %>" /></a>
+                    </p> 
+<%
+});
+%>
+
+
+                    <script>
+                        var slideIndex = 0;
+                        setInterval(function () {
+var img = document.getElementById('slide-' + slideIndex);
+if(img != null){
+                            var src = img.src;
+                            var bg = document.getElementById('slide-bg');
+                            bg.style = 'background-image: url("' + src + '");';
+}
+                            slideIndex++;
+                            if (slideIndex == 3) slideIndex = 0;
+                        }, 2500);
+                    </script>

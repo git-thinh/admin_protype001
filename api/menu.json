@@ -1,0 +1,101 @@
+﻿[
+  {
+    "recid": 10,
+    "id": "menu",
+    "type": "menu",
+    "caption": "",
+    "icon": "fa fa-bars",
+    "items": [
+      {
+        "recid": 100,
+        "id": "manager_reply",
+        "text": "Manage Reply",
+        "icon": "fa fa-comment"
+      },
+      {
+        "recid": 101,
+        "id": "manager_category",
+        "text": "Manage Category",
+        "icon": "fa fa-bars"
+      },
+      {
+        "recid": 102,
+        "id": "manager_tag",
+        "text": "Manage Tags",
+        "icon": "fa fa-tags"
+      },
+      {
+        "recid": 103,
+        "id": "manager_temp",
+        "text": "Manage Temp",
+        "icon": "fa fa-code"
+      },
+      {
+        "recid": 104,
+        "id": "manager_article",
+        "text": "Manage Article",
+        "icon": "fa fa-file-o"
+      },
+      {
+        "recid": 105,
+        "id": "manager_topic",
+        "text": "Manage Topic",
+        "icon": "fa fa-bars"
+      },
+      {
+        "recid": 106,
+        "id": "manager_user",
+        "text": "Manage Account",
+        "icon": "fa fa-user-o"
+      },
+      {
+        "recid": 107,
+        "id": "manager_image",
+        "text": "Manage Image",
+        "icon": "fa fa-image"
+      },
+      {
+        "recid": 108,
+        "type": "break"
+      },
+      {
+        "recid": 997,
+        "id": "data_refresh",
+        "text": "Data Refresh",
+        "icon": "fa fa-refresh"
+      },
+      {
+        "recid": 998,
+        "id": "login",
+        "text": "LogOut",
+        "icon": "fa fa-sign-out"
+      },
+      {
+        "recid": 999,
+        "id": "exit",
+        "text": "Exit",
+        "icon": "fa fa-power-off"
+      }
+    ]
+  },
+  {
+    "type": "html",
+    "html": "<span class=module_title></span>"
+  },
+  {
+    "type": "html",
+    "html": "<span class=action_title></span>"
+  },
+  {
+    "type": "html",
+    "html": "<span class=mode_title></span>"
+  },
+  {
+    "recid": 20,
+    "type": "spacer"
+  },
+  {
+    "type": "html",
+    "html": "<span class=username>...</span>"
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "recid": 1,
+    "username": "admin",
+    "password": "admin",
+    "system": "",
+    "fullname": ""
+  },
+  {
+    "recid": 2,
+    "username": "user",
+    "password": "user",
+    "system": "",
+    "fullname": ""
+  },
+  {
+    "recid": 3,
+    "username": "Viet",
+    "password": "123",
+    "system": "",
+    "fullname": ""
+  }
+]

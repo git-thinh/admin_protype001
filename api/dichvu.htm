@@ -1,0 +1,42 @@
+<ul> 
+<%
+var listMenu = _.filter(items, function (x) { return x.tag != null && x.tag.indexOf('dichvu') != -1; });
+_.each(listMenu,function(_item, _index, _list){
+var _title = _item.title;
+var _url = _item.url;
+var _keyword = _item.keyword;
+var _img = _item.image.split(';')[0]; 
+
+
+if(_index < 4) 
+{
+%>    
+<li>
+    <a href="<%= _url %>">
+        <img src="<%= _img %>"/>
+    </a>
+</li> 
+<li>
+    <a href="<%= _url %>">
+        <b><%= _title %></b><p><%= _keyword %></p>
+    </a>
+</li>
+<% 
+}
+else
+{%>    
+<li>
+    <a href="<%= _url %>">
+        <b><%= _title %></b><p><%= _keyword %></p>
+    </a>
+</li>
+<li>
+    <a href="<%= _url %>">
+        <img src="<%= _img %>"/>
+    </a>
+</li> 
+<% 
+}
+});
+%> 
+</ul>

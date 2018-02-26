@@ -1,0 +1,69 @@
+﻿{
+  "ui": {
+    "close": "Close",
+    "select": "Select",
+    "save": "Save",
+    "remove": "Remove",
+    "addnew": "Create",
+    "add_item": "Create new item",
+    "edit_item": "Edit item",
+    "update_success": "Update items successfully",
+    "select_only_item": "Select only record to update",
+    "can_not_find": "The content can not find",
+    "confirm_remove": "Are you sure remove items?",
+    "confirm_save": "Are you sure update items?",
+    "confirm_close": "Are you sure close?"
+  },
+  "user": {
+    "login": "Login",
+    "login_system": "Login System",
+    "header": "Manage account",
+    "select": "Select account",
+    "username": "Username",
+    "password": "Password",
+    "system": "System",
+    "fullname": "Fullname"
+  },
+  "reply": {
+    "fullname": "Fullname",
+    "note": "Note",
+    "phone": "Phone",
+    "time": "Time"
+  },
+  "category": {
+    "header": "Manage Category",
+    "select": "Select Category",
+    "pid": "Parent",
+    "name": "Title",
+    "order": "Order",
+    "link": "Link"
+  },
+  "article": {
+    "header": "Manage Articles",
+    "select": "Select Articles",
+    "edit": "Edit Articles",
+    "title": "Title",
+    "url": "Link",
+    "content": "Content",
+    "file": "File",
+    "recid": "ID",
+    "ok": "OK",
+    "active": "Active",
+    "tag": "Tags",
+    "image": "Images",
+    "image_position": "Position",
+    "keyword": "Keyword",
+    "topic": "Topic"
+  },
+  "image": {
+    "header": "Manage Images",
+    "select": "Select Images"
+  },
+  "topic": {
+    "header": "Manage Topic",
+    "select": "Select Topic",
+    "pid": "Parent",
+    "name": "Title",
+    "link": "Link"
+  }
+}

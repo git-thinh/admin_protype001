@@ -1,0 +1,71 @@
+﻿.manager_article {
+}
+
+    .manager_article_add {
+    }
+
+        .manager_article_add .w2ui-column.col-0 {
+            width: 100%;
+        }
+
+        .manager_article_add .w2ui-field.w2ui-span6 {
+            width: 100%;
+        }
+
+            .manager_article_add .w2ui-field.w2ui-span6 > label {
+                width: 60px;
+            }
+
+            .manager_article_add .w2ui-field.w2ui-span6 > div {
+                margin-left: 68px;
+            }
+
+                .manager_article_add .w2ui-field.w2ui-span6 > div input[type=text] {
+                    width: 100% !important;
+                }
+
+                .manager_article_add .w2ui-field.w2ui-span6 > div textarea {
+                    width:100%;
+                    height: 99px;
+                }
+
+                .manager_article_add .w2ui-field.w2ui-span6 > div textarea[name=content] {
+                    width:100%;
+                    height: 399px;
+                }
+                .manager_article_add .w2ui-field.w2ui-span6 > div input[name=image] {
+                    /*pointer-events: none;*/
+                    cursor:pointer;
+                }
+
+/********************************/
+
+        .manager_article_edit .w2ui-column.col-0 {
+            width: 100%;
+        }
+
+        .manager_article_edit .w2ui-field.w2ui-span6 {
+            width: 100%;
+        }
+
+            .manager_article_edit .w2ui-field.w2ui-span6 > label {
+                width: 60px;
+            }
+
+            .manager_article_edit .w2ui-field.w2ui-span6 > div {
+                margin-left: 68px;
+            }
+
+                .manager_article_edit .w2ui-field.w2ui-span6 > div input[type=text] {
+                    width: 100% !important;
+                }
+
+                .manager_article_edit .w2ui-field.w2ui-span6 > div textarea {
+                    width:100%;
+                    height: 99px;
+                }
+
+                .manager_article_edit .w2ui-field.w2ui-span6 > div textarea[name=content] {
+                    width:100%;
+                    height: 399px;
+                }
